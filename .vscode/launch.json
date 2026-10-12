@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "1. Scrape & load DB (scraper.py)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/scraper.py",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "2. Run FastAPI server (uvicorn)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": ["main:app", "--reload"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "3. Run client - CSV + plot (client.py)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/client.py",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}
